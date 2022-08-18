@@ -22,14 +22,14 @@
             pulaLinha();
         }
 
-        function sorteia (){    //função deve se declarada vazia para receber parametros do prompt.
+        function sorteia (){    //função deve ser declarada vazia para receber parametros do prompt.
             numero = Math.round(Math.random() * numeroMaximo);
             return numero;
         }
 
-        var numeroMaximo = parseInt(prompt("Digite o numero maximo"));
+        var numeroMaximo = parseInt(prompt("Digite o numero maximo"));  //recebe parametor e passa para a função sorteia
 
-        var numeroPensado = sorteia(numeroMaximo);  //estava ocorrendo falhar por não passar o parametro para a função
+        var numeroPensado = sorteia();  //estava ocorrendo falhar por não passar o parametro para a função
         console.log(numero); //imprimir no console o numero gerado, para teste da condição if você acertou.
 
         var chute = parseInt(prompt("Digite seu chute"));

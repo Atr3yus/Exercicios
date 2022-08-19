@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/download-icon-super+tiny+icons+javascript-1324450741921820748_0.svg" type="image/x-icon">
+    <title>Media Idades</title>
+</head>
+<body>
+
+    <h1>Media Idades</h1>
+    
+    <script>
+
+        function pulaLinha (){
+            document.write("<br><br>");
+        }
+
+        function mostra (frase){
+            document.write(frase);
+            pulaLinha();
+        }
+
+        var totalFamiliares = parseInt(prompt("Quantidade de familiares ?"));
+        var totalIdades = 0;
+        var numero = 1;
+
+        while(numero <= totalFamiliares){
+
+            var idade = parseInt(prompt("Informe a idade do familiar"));
+            totalIdades = totalIdades + idade;
+            numero ++;
+        
+        }
+
+        var mediaIdades = totalIdades / totalFamiliares;
+        mostra("A média das idades dos familiares é " + mediaIdades);
+
+        mostra("Fim");
+
+    </script>
+</body>

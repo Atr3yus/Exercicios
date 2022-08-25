@@ -30,8 +30,26 @@
 
             while(numero <= quantidade){
 
-                segredos.push(sorteia());
-                numero ++;
+                var numeroAleatorio = sorteia();
+
+                if(numeroAleatorio !== 0 ) {
+
+                    var achou = false;
+
+                    for(var posicao = 0; posicao < segredos.length; posicao++){ // codigo para percorrer a lista
+
+                        if(segredos[posicao] == numeroAleatorio){ // verifica se contem elemento dentro da lista
+                            achou = true;
+                            break;
+                        }
+                    }
+                }
+                
+                if(achou == false){
+                    segredos.push(numeroAleatorio);   //"segredos.push" = empurre dentro de segredos, oque receber de da variavel numerosAleatorios, que recebe da função sorteia
+                    numero ++;
+                }
+                
             }
 
             return segredos;
@@ -44,7 +62,7 @@
        
        console.log(segredos);
        
-       function verifica() {
+       function verifica() { 
 
             var achou = false;  //variavel para executar o alerta de "errou" caso o usuario erre
 

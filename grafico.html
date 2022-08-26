@@ -40,21 +40,24 @@
     var serie2015 = [50, 25, 20, 5];
     var serie2016 = [65, 20, 13, 2];
     var cores = ['blue', 'green', 'yellow', 'red'];
+   
 
-    desenhaRetangulo(50, 50, 100, 100, "blue");
-    
+    function desenhaBarra(x,y, texto, serie, cores){
 
-    function desenhaBarra(x,y,texto, cores){
-
-        desenhaRetangulo(x, y + 85, 100, 100, "cores");
-        desenhaRetangulo(x, y + 75, 100, 100, "cores");
-        desenhaRetangulo(x, y + 50, 100, 100, "cores");
-        desenhaRetangulo(x, y, 100, 100, "cores");    
+        desenhaRetangulo(x, y + serie[3], 100, 100, cores[3]);
+        desenhaRetangulo(x, y + serie[2], 100, 100, cores[2]);
+        desenhaRetangulo(x, y + serie[1], 100, 100, cores[1]);
+        desenhaRetangulo(x, y + serie[0], 100, 100, cores[0]);  
+        desenhaTexto(x + 10, y - 10, texto)  
          
     }
 
+    desenhaBarra(50, 50, "2015", serie2015, cores);
+    desenhaBarra(200, 50, "2016", serie2016, cores);
 
-    desenhaBarra(50, 50,"2015", "yellow");
+    //desenhaBarra(50, 50, serie2015, cores, '2015');
+    //desenhaBarra(150, 50, serie2016, cores, '2016');
+    
     
 
 </script>

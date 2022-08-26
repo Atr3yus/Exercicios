@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/download-icon-super+tiny+icons+javascript-1324450741921820748_0.svg" type="image/x-icon">
+    <title>Esquadro 2</title>
+</head>
+<body>
+    <h1>Esquadro 2</h1>
+    
+    <hr><br> 
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    function desenhaEsquadro(xa, ya, xc, yc, cor){
+
+        pincel.fillStyle = cor;
+        pincel.beginPath();
+        pincel.moveTo(xa, ya);
+        pincel.lineTo(xa, yc);
+        pincel.lineTo(xc, yc);
+        pincel.fill();
+
+    }
+
+    desenhaEsquadro(50,50,400,400, "black");
+    desenhaEsquadro(100, 175, 275,350, "white");
+
+        /*pincel.fillStyle="white";
+        pincel.beginPath();
+        pincel.moveTo(100, 175);
+        pincel.lineTo(100, 350);
+        pincel.lineTo(275, 350);
+        pincel.fill();*/    
+
+</script> 
+
+
+
+</body>

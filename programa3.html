@@ -23,13 +23,15 @@
     pincel.fillStyle = "grey";
     pincel.fillRect(0, 0, 600, 400);
 
+    var cores = ["blue", "red", "green", "pink"];
+    var i = 0;
 
     function desenhaCirculo(evento){
 
         var x = evento.pageX - tela.offsetLeft;
         var y = evento.pageY - tela.offsetTop;
 
-        pincel.fillStyle = "blue";
+        pincel.fillStyle = cores[i];
         pincel.beginPath();
         pincel.arc(x, y, 10, 0, 2 * 3.14);
         pincel.fill();
@@ -39,17 +41,16 @@
         console.log("y =" + y);
     }
 
-    tela.onclick = desenhaCirculo;
-
-    var cores = ["blue", "red", "green", "pink"];
+    tela.onclick = desenhaCirculo;    
 
     function mudacor(){
 
-        for(i = 0; i < cores.length; i++){
-            var cor = [i];
-            cor ++;
-        }
+        cores[i++];
 
+        if(i >= cores.length){
+            i = 0;
+        }
+            
         alert("funcionou");
         return false;
     }

@@ -7,19 +7,39 @@
     pincel.fillStyle = 'grey';
     pincel.fillRect(0, 0, 600, 400);
 
-    function desenhaCirculo(evento) {
+    var desenhar = false;
 
-        var x = evento.pageX - tela.offsetLeft;
-        var y = evento.pageY - tela.offsetTop;
-        pincel.fillStyle = 'blue';
-        pincel.beginPath();
-        pincel.arc(x, y, 10, 0, 2 * 3.14);
-        pincel.fill();
+    tela.onmousemove = function (evento) {  //tirado nome da função e deixada como "função anonima"
+        if(desenha){    // if quando () sem = condição, significa que a condição é igual a true, EX: if(desenha) = if(desenha == true).
+            var x = evento.pageX - tela.offsetLeft;
+            var y = evento.pageY - tela.offsetTop;
+            pincel.fillStyle = "red";
+            pincel.beginPath();
+            pincel.arc(x, y, 10, 0, 2 * 3.14);
+            pincel.fill();
+            
+        }
         console.log(x + ',' + y);
-
     }
 
+    tela.onmousedown = function (){ //tirado nome da função e deixada como "função anonima"
+        desenha = true;
+    }
+    /*
+    function habilitaDesenhar = (){
+        desenha = true;
+    }
+    */
 
-    //onmousedown = mouse clicado
-    //onmouseup = mouse solto
+    tela.onmouseup = function (){   //tirado nome da função e deixada como "função anonima"
+        desenha = false;
+    }
+
+    /*
+    function desabilitaDesenhar = (){
+        desenha = false;
+    }
+    */
+          
+
 </script>

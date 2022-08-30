@@ -34,26 +34,3 @@
 </script>
 
 </body>
-=======
-<canvas width="600" height="400"></canvas>
-
-<script>
-
-    var tela = document.querySelector('canvas');
-    var pincel = tela.getContext('2d');
-    pincel.fillStyle = 'lightgray';
-    pincel.fillRect(0, 0, 600, 400);
-
-    function desenhaCirculo(x, y, raio) {
-
-        pincel.fillStyle = 'blue';
-        pincel.beginPath();
-        pincel.arc(x, y, raio, 0, 2 * Math.PI);
-        pincel.fill();
-    }
-
-    desenhaCirculo(20, 20, 10);
-    
-
-</script>
->>>>>>> 8c0bd4bc1aca4598784daf8462e2e6caf4977922
